@@ -1,0 +1,443 @@
+@media screen and (max-width: 900px) {
+  body .threeCards{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .hero{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .navbar{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .title1{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .title2{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .footerSections {
+    grid-template-columns: 1fr;
+  }
+  footer .footerSection2{
+    margin-left: 25%;
+  }
+  footer .footerSection3{
+    margin-left: 25%;
+  }
+}
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar{
+  background-color: rgba(255, 0, 0, 0.7);
+  display: grid;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 100%;  
+  border-radius: 1em;
+  margin-bottom: 1em;
+  grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 880px) {
+      background-color: yellow;    
+    }
+  }
+}
+
+#navLogo img{
+  border-radius: 15em;
+  margin-left: 10%;
+  padding: 2%;
+  vertical-align: middle;
+}
+
+.navbar ul{
+  margin-right: 10%;
+}
+
+.navbar li{
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  float: right;
+  padding: 10px;
+  margin-left: 5%;
+  vertical-align: middle;
+}
+
+.slideshowBackground {
+}
+.slideshow{
+  display: grid;
+  grid-template-columns: .5fr 4fr .5fr;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80vw;
+  height: auto;
+  background-color: lightseagreen;
+  justify-items: center;
+  align-items: center;
+  border-radius: 1em;
+
+}
+
+.slideshow img{
+  margin-top: 1em;
+  width: 100%;
+  height: 100%;
+}
+#left-button button{
+  justify-items: center;
+  padding: 20%;
+}
+#right-button button{
+  justify-items: center;
+  padding: 20%;
+
+}
+
+/* ------------------- */
+
+.hero{
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  align-items: center;
+  border-radius: 1em;
+}
+.heroText {
+  text-align: center;
+  margin: 2em;
+}
+
+.heroImage img{
+  width: 100%;
+  justify-content: left;
+  border-radius: 1em;
+}
+
+/* ------------------- */
+
+.title1Title{
+  font-size: 200%;
+  text-align: center;
+}
+
+.title1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  align-items: center;
+  background-color: lightskyblue;
+  border-radius: 1em;
+}
+
+.title1Text {
+  text-align: center;
+  margin: 2em;
+}
+.title1Text p{
+  text-align: justify;
+}
+
+.title1Image img{
+  width: 100%;
+  height: auto;
+}
+/* ----------------- */
+
+.title2Title{
+  font-size: 200%;
+  text-align: center;
+}
+
+.title2{
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  align-items: center;
+  border-radius: 1em;
+}
+.title2Text {
+  text-align: center;
+  margin-right: 2em;
+}
+
+.title2Image img{
+  width: 100%;
+  height: auto;
+  justify-content: left;
+  border-radius: 1em;
+}
+/* ---------------- */
+.ourTeam{
+  font-size: 200%;
+  text-align: center;
+}
+/* ---------------- */
+
+.threeCards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+
+
+#adam, #abraham, #daniel{
+  background-color: rgba(255, 0, 0, 0.351);
+  border: solid;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 3%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-style: none;
+  font-size: 80%;
+}
+
+
+#adam img{
+  width: 100%;
+  display: block;
+}
+
+#daniel img{
+  width: 100%;
+  display: block;
+}
+#abraham img{
+  width: 100%;
+  display: block;
+
+}
+
+.threeCards button{
+  background-color: cornflowerblue;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 1em;
+  border-style: solid;
+  border-color: lightyellow;
+  font-size: 100%;
+}
+
+form, .myDIV{
+  display: none;
+}
+#myDIV{
+  margin-top: 1em;
+  display: "none";
+}
+#myDIV1{
+  margin-top: 1em;
+  display: "none";
+}
+#myDIV2{
+  margin-top: 1em;
+  display: "none";
+}
+
+.threeCards button:hover{
+  background-color: lightyellow;
+  border-style: solid;
+  border-color: cornflowerblue;
+}
+/* --------------- */
+
+.callToAction{
+  position: relative;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  object-fit: cover;
+}
+.callToActionText {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150%;
+  text-align: center;
+}
+.callToAction img{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  border-radius: 1em;
+}
+
+#bookAppointment{
+  background-color:lightsalmon;
+  padding: 5%;
+  border-radius: 1em;
+}
+#bookAppointment:hover {
+  padding: 5%;
+  border-radius: 1em;
+  background-color: lightyellow;
+}
+/* ---------------- */
+
+footer{
+  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left:5%;
+  padding-right: 7%;
+  border-radius: 1em;
+
+}
+
+
+#footerLogo img{
+  width: 55%;
+  border-radius: 2em;
+}
+
+.footerSection1 {
+  font-size: 100%;
+  text-align: center;
+}
+.footerSection2 {
+  display: inline-block;
+  list-style: none;
+  font-size: 100%;
+  text-align: left;
+  margin-left: 10%;
+
+}
+.footerSection3 {
+  font-size: 100%;
+}
+footer{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------BOOK APPOINTMENT--------- */
+.dropbtn {
+  width: auto;
+  height: auto;
+  background-color: red;
+  padding: 5%;
+  font-size: 100%;
+  border: yellow;
+  cursor: pointer;
+  color: white;
+  border-radius: 1em;
+  border-color: white;
+  border-width: 5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: yellow;
+  color: purple;
+}
+
+
+
+.dropdown {
+  position: relative;
+  align-content: center;
+  display: inline-block;
+}
+
+.dropdown-content {
+  padding: 12px 16px;
+  margin: 2%;
+  display: none;
+  /* Keeps dropdown button same size */
+  position: absolute;
+  background-color: lightgoldenrodyellow;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 100%;
+}
+
+.dropdown-content a {
+  color: darkmagenta;
+  padding: 2% 10%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: yellow;
+}
+
+/* COPIED */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Used by Js */
+.show {
+  display:block;
+}
+
+
+
+
+
+
+
+
+
