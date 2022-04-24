@@ -1,24 +1,26 @@
-let submitButton = document.querySelector(".submitButton");
-let inputState = document.getElementById("myState").value;
+'use strict';
+const submitButton = document.querySelector(".submitButton");
 
-submitButton.addEventListener("click", federal);
-submitButton.addEventListener("click", state);
-submitButton.addEventListener("click", local);
-submitButton.addEventListener("click", socialSecurity);
-submitButton.addEventListener("click", medicare);
-submitButton.addEventListener("click", netIncome);
-submitButton.addEventListener("click", taxTotals);
+// Listens for when you Click on the Submit button
+submitButton.addEventListener("click", allFunctions);
 
+// Here I enclosed all my onclick requests into 1 function
+function allFunctions(){
+    federal();
+    state();
+    local();
+    socialSecurity();
+    medicare();
+    netIncome();
+    taxTotals();
+};
 
 // FEDERAL - TAX BRACKETS
 function federal() {
-    'use strict';
     document.querySelector("html").style.backgroundColor = "violet";
     // Here I used window. rather than let or const so it is global
     window.grossInputSalary = document.getElementById("myText").value;
     // INCOME - First Row
-
-
     let firstBracketMax = 9875;
     let secondBracketMax = 40125;
     let thirdBracketMax = 85525;
@@ -40,27 +42,21 @@ function federal() {
     if (grossInputSalary >= 1 && grossInputSalary <= 9875) {
         window.federalTaxTotal = parseInt(grossInputSalary * firstSinglesBracket);
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 9876 && grossInputSalary <= 40125) {
         window.federalTaxTotal = parseInt(((grossInputSalary - firstBracketMax) * secondSinglesBracket) + (firstBracketMax * firstSinglesBracket));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 40126 && grossInputSalary <= 85525) {
         window.federalTaxTotal = parseInt(((grossInputSalary - secondBracketMax) * thirdSinglesBracket) + ((firstBracketMax * firstSinglesBracket) + ((secondBracketMax - firstBracketMax) * secondSinglesBracket)));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 85526 && grossInputSalary <= 163300) {
         window.federalTaxTotal = parseInt(((grossInputSalary - thirdBracketMax) * fourthSinglesBracket) + (firstBracketMax * firstSinglesBracket) + ((secondBracketMax - firstBracketMax) * secondSinglesBracket) + ((thirdBracketMax - secondBracketMax) * thirdSinglesBracket));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 163301 && grossInputSalary <= 207350) {
         window.federalTaxTotal = parseInt(((grossInputSalary - fourthBracketMax) * fifthSinglesBracket) + (firstBracketMax * firstSinglesBracket) + ((secondBracketMax - firstBracketMax) * secondSinglesBracket) + ((thirdBracketMax - secondBracketMax) * thirdSinglesBracket) + ((fourthBracketMax - thirdBracketMax) * fourthSinglesBracket));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 207351 && grossInputSalary <= 518400) {
         window.federalTaxTotal = parseInt(((grossInputSalary - fifthBracketMax) * sixthSinglesBracket) + (firstBracketMax * firstSinglesBracket) + ((secondBracketMax - firstBracketMax) * secondSinglesBracket) + ((thirdBracketMax - secondBracketMax) * thirdSinglesBracket) + ((fourthBracketMax - thirdBracketMax) * fourthSinglesBracket) + ((fifthBracketMax - fourthBracketMax) * fifthSinglesBracket));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
-
     } else if (grossInputSalary >= 518401) {
         window.federalTaxTotal = parseInt(((grossInputSalary - sixthBracketMax) * seventhSinglesBracket) + (firstBracketMax * firstSinglesBracket) + ((secondBracketMax - firstBracketMax) * secondSinglesBracket) + ((thirdBracketMax - secondBracketMax) * thirdSinglesBracket) + ((fourthBracketMax - thirdBracketMax) * fourthSinglesBracket) + ((fifthBracketMax - fourthBracketMax) * fifthSinglesBracket) + ((sixthBracketMax - fifthBracketMax) * sixthSinglesBracket));
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
@@ -69,15 +65,14 @@ function federal() {
     }
 
 }
-
-
+// FEDERAL - TAX BRACKETS (END)
 
 
 
 // NEW YORK - STATE TAX BRACKETS
 function state() {
+    let inputState = document.getElementById("myState").value;
 
-    'use strict';
     let firstNYBracketMax = 8500;
     let secondNYBracketMax = 11700;
     let thirdNYBracketMax = 13900;
@@ -98,54 +93,35 @@ function state() {
     let stateTaxes = document.getElementById("stateTaxes");
     window.stateTaxTotal;
 
-
-    if (grossInputSalary >= 1 && grossInputSalary <= 8500) {
+    if (grossInputSalary >= 1 && grossInputSalary <= 8500 && (inputState === "nyc" || inputState === "new york" || inputState === "ny") ) {
         window.stateTaxTotal = parseInt(grossInputSalary * firstSinglesNYBracket);
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 8501 && grossInputSalary <= 11700) {
         window.stateTaxTotal = parseInt(((grossInputSalary - firstNYBracketMax) * secondSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 11701 && grossInputSalary <= 13900) {
         window.stateTalTotal = parseInt(((grossInputSalary - secondNYBracketMax) * thirdSinglesNYBracket) + ((firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket)));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 13901 && grossInputSalary <= 21400) {
         window.stateTaxTotal = parseInt(((grossInputSalary - thirdNYBracketMax) * fourthSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket) + ((thirdNYBracketMax - secondNYBracketMax) * thirdSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 21401 && grossInputSalary <= 80650) {
         window.stateTaxTotal = parseInt(((grossInputSalary - fourthNYBracketMax) * fifthSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket) + ((thirdNYBracketMax - secondNYBracketMax) * thirdSinglesNYBracket) + ((fourthNYBracketMax - thirdNYBracketMax) * fourthSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
-
     } else if (grossInputSalary >= 80651 && grossInputSalary <= 215400) {
         window.stateTalTotal = parseInt(((grossInputSalary - fifthNYBracketMax) * sixthSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket) + ((thirdNYBracketMax - secondNYBracketMax) * thirdSinglesNYBracket) + ((fourthNYBracketMax - thirdNYBracketMax) * fourthSinglesNYBracket) + ((fifthNYBracketMax - fourthNYBracketMax) * fifthSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 215401 && grossInputSalary <= 1077550) {
         window.stateTaxTotal = parseInt(((grossInputSalary - sixthNYBracketMax) * seventhSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket) + ((thirdNYBracketMax - secondNYBracketMax) * thirdSinglesNYBracket) + ((fourthNYBracketMax - thirdNYBracketMax) * fourthSinglesNYBracket) + ((fifthNYBracketMax - fourthNYBracketMax) * fifthSinglesNYBracket) + ((sixthNYBracketMax - fifthNYBracketMax) * sixthSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
-
     } else if (grossInputSalary >= 1077551) {
         window.stateTaxTotal = parseInt(((grossInputSalary - seventhNYBracketMax) * eighthSinglesNYBracket) + (firstNYBracketMax * firstSinglesNYBracket) + ((secondNYBracketMax - firstNYBracketMax) * secondSinglesNYBracket) + ((thirdNYBracketMax - secondNYBracketMax) * thirdSinglesNYBracket) + ((fourthNYBracketMax - thirdNYBracketMax) * fourthSinglesNYBracket) + ((fifthNYBracketMax - fourthNYBracketMax) * fifthSinglesNYBracket) + ((sixthNYBracketMax - fifthNYBracketMax) * sixthSinglesNYBracket) + ((seventhNYBracketMax - sixthNYBracketMax) * seventhSinglesNYBracket));
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
-
     } else {
         return stateTaxes.innerHTML = "No Gross Salary";
     }
-
-
 }
-
+// NEW YORK - STATE TAX BRACKETS (END)
 
 
 // NEW YORK CITY - LOCAL TAXES
@@ -161,31 +137,24 @@ function local() {
 
     let localTaxes = document.getElementById("localTaxes");
     window.localTaxTotal;
-
-
-    if (grossInputSalary >= 1 && grossInputSalary <= 12000 || (inputState === "nyc" || inputState === "new york city")) {
+    if (grossInputSalary >= 1 && grossInputSalary <= 12000) {
         window.localTaxTotal = parseInt(grossInputSalary * firstSinglesNYCBracket);
         return localTaxes.innerHTML = "$" + localTaxTotal;
-
-
-    } else if (grossInputSalary >= 12001 && grossInputSalary <= 25000 || (inputState === "nyc" || inputState === "new york city")) {
+    } else if (grossInputSalary >= 12001 && grossInputSalary <= 25000) {
         window.localTaxTotal = parseInt(((grossInputSalary - firstNYCBracketMax) * secondSinglesNYCBracket) + (firstNYCBracketMax * firstSinglesNYCBracket));
-        return localTaxes.innerHTML = "$" + localTaxTotal;
-
-
-    } else if (grossInputSalary >= 25001 && grossInputSalary <= 50000 || (inputState === "nyc" || inputState === "new york city")) {
+        return localTaxes.innerHTML = "$" + localTaxTotal
+    } else if (grossInputSalary >= 25001 && grossInputSalary <= 50000) {
         window.localTaxTotal = parseInt(((grossInputSalary - secondNYCBracketMax) * thirdSinglesNYCBracket) + ((firstNYCBracketMax * firstSinglesNYCBracket) + ((secondNYCBracketMax - firstNYCBracketMax) * secondSinglesNYCBracket)));
         return localTaxes.innerHTML = "$" + localTaxTotal;
-
-
-    } else if (grossInputSalary > 50001 || (inputState === "nyc" || inputState === "new york city")) {
+    } else if (grossInputSalary > 50001) {
         window.localTaxTotal = parseInt(((grossInputSalary - thirdNYCBracketMax) * fourthSinglesNYCBracket) + (firstNYCBracketMax * firstSinglesNYCBracket) + ((secondNYCBracketMax - firstNYCBracketMax) * secondSinglesNYCBracket) + ((thirdNYCBracketMax - secondNYCBracketMax) * thirdSinglesNYCBracket));
         return localTaxes.innerHTML = "$" + localTaxTotal;
-
     } else {
         return localTaxes.innerHTML = "Testing1";
     }
 }
+// NEW YORK CITY - LOCAL TAXES
+
 
 // SOCIAL SECURITY - TAX BRACKETS
 function socialSecurity() {
@@ -199,10 +168,6 @@ function medicare() {
   document.getElementById("medicare").innerHTML = "$" + parseInt(grossInputSalary * 0.0145);
 }
 
-
-
-
-
 function netIncome() {
     document.getElementById("yearlyNet").innerHTML = "$" + (grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal));
     document.getElementById("monthlyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/12);
@@ -212,9 +177,6 @@ function netIncome() {
 function taxTotals() {
     document.getElementById("taxTotals").innerHTML = "$" + (federalTaxTotal + stateTaxTotal +localTaxTotal);
 }
-
-
-
 
 
 // document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary * 2);
