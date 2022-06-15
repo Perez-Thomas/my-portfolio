@@ -13,11 +13,16 @@ function allFunctions(){
     medicare();
     netIncome();
     taxTotals();
+    noticeToUser();
 };
 
 // FEDERAL - TAX BRACKETS
 function federal() {
-    document.querySelector("html").style.backgroundColor = "violet";
+    document.querySelector("html").style.backgroundColor = "lightblue";
+    document.querySelector(".incomeContainer").style.backgroundColor = "lightblue";
+    document.querySelector(".taxesContainer").style.backgroundColor = "lightyellow";
+    document.querySelector(".retirementContainer").style.backgroundColor = "lightgreen";
+
     // Here I used window. rather than let or const so it is global
     window.grossInputSalary = document.getElementById("myText").value;
     // INCOME - First Row
@@ -38,7 +43,6 @@ function federal() {
 
     let federalTaxes = document.getElementById("federalTaxes");
     window.federalTaxTotal;
-
     if (grossInputSalary >= 1 && grossInputSalary <= 9875) {
         window.federalTaxTotal = parseInt(grossInputSalary * firstSinglesBracket);
         return federalTaxes.innerHTML = "$" + federalTaxTotal;
@@ -71,7 +75,7 @@ function federal() {
 
 // NEW YORK - STATE TAX BRACKETS
 function state() {
-    let inputState = document.getElementById("myState").value;
+    // let inputState = document.getElementById("myState").value;
 
     let firstNYBracketMax = 8500;
     let secondNYBracketMax = 11700;
@@ -93,7 +97,7 @@ function state() {
     let stateTaxes = document.getElementById("stateTaxes");
     window.stateTaxTotal;
 
-    if (grossInputSalary >= 1 && grossInputSalary <= 8500 && (inputState === "nyc" || inputState === "new york" || inputState === "ny") ) {
+    if (grossInputSalary >= 1 && grossInputSalary <= 8500) {
         window.stateTaxTotal = parseInt(grossInputSalary * firstSinglesNYBracket);
         return stateTaxes.innerHTML = "$" + stateTaxTotal;
     } else if (grossInputSalary >= 8501 && grossInputSalary <= 11700) {
@@ -157,6 +161,12 @@ function local() {
 
 
 // SOCIAL SECURITY - TAX BRACKETS
+function netIncome() {
+    document.getElementById("yearlyNet").innerHTML = "$" + (grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal));
+    document.getElementById("monthlyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/12);
+    document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/24);
+}
+
 function socialSecurity() {
   let grossInputSalary = document.getElementById("myText").value;
   document.getElementById("socialSecurity").innerHTML = "$" + parseInt(grossInputSalary * 0.062);
@@ -168,15 +178,15 @@ function medicare() {
   document.getElementById("medicare").innerHTML = "$" + parseInt(grossInputSalary * 0.0145);
 }
 
-function netIncome() {
-    document.getElementById("yearlyNet").innerHTML = "$" + (grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal));
-    document.getElementById("monthlyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/12);
-    document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary - (federalTaxTotal + stateTaxTotal +localTaxTotal))/24);
-}
+
 
 function taxTotals() {
     document.getElementById("taxTotals").innerHTML = "$" + (federalTaxTotal + stateTaxTotal +localTaxTotal);
 }
+
+function noticeToUser(){
+    alert("These are the taxes and benefits cost if you live in NYC.");
+};
 
 
 // document.getElementById("biweeklyNet").innerHTML = "$" + parseInt((grossInputSalary * 2);

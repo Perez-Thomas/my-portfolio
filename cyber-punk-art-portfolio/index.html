@@ -7,13 +7,46 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <header id="body" data-aos="fade-down">
-        <h1>Cyber Synthwave Palettes</h1>
+        <h1>CULTURE SCREEN</h1>
     </header>
 <body>
+    
+<!-- 
     <div class="hero" >
         <a href="images/cyberpunk1.jpg"></a>
+    </div> 
+-->
+
+<!-- SLIDESHOW FIX CLICK BUTTON FLOATING UP TOP -->
+<div id="slideShowContainer">
+    <div class="leftButtonSlide">
+        <a class="prev" onclick="plusSlides(-1)">&lsaquo;</a>
     </div>
- 
+        <div>
+        <div class="mySlides fade3">
+            <img class="homePageSlides" id="slidePic1" src="images/purple4.jpg">
+        </div>
+        <div class="mySlides fade3">
+            <img class="homePageSlides" src="images/purple5.jpg">
+        </div>
+        <div class="mySlides fade3">
+            <img class="homePageSlides" src="images/purple6.jpg">
+        </div>
+    </div>
+
+    <div class="rightButtonSlide">
+        <a class="next" onclick="plusSlides(1)">&rsaquo;</a>
+    </div>
+</div>
+<!-- SLIDESHOW ENDS -->
+
+
+
+
+
+
+
+
 <div class="wrapper">
         <img src="images/image1.png" class="box1"  id="zoom">
         <img src="images/image2.png" class="box2" id="zoom">
@@ -29,9 +62,9 @@
 </div>
     
 <div class="wrapperTwo" data-aos="fade-up-left">
-    <h1>Futuristic Artwork</h1>
-    <h2>Cyber Punk Color Palettes is the site for all your cyberpunk color palettes, wallpapers, and artwork</h2>
-    <button>Color Palettes</button>
+    <h1>TV-Show Episode Summaries</h1>
+    <h2>We summarize your favorite TV-Shows. </h2>
+    <button id="youtube-button"> <i>YouTube</i> Channel</button>
 </div>
 
 <div class="wrapperThree">
@@ -47,8 +80,8 @@
 
 <div class="wrapperTwo" data-aos="fade-up-left">
     <h1>Cyber Punk Color Palettes</h1>
-    <p>Cyber Punk Color Palettes is the site for all your cyberpunk color palettes, wallpapers, and artwork</p>
-    <button>Color Palettes</button>
+    <p>Photos of your favorite TV-show scenes</p>
+    <button id="instagram-button"> <i>Instagram</i> Photography </button>
 </div>
 
 <div class="wrapperThree">
@@ -67,23 +100,6 @@
 
     </div>
 
-<!-- SLIDESHOW FIX CLICK BUTTON FLOATING UP TOP -->
-    <div id="slideShowContainer">
-        <div class="mySlides fade3">
-            <img class="homePageSlides" id="slidePic1" src="images/purple4.jpg">
-        </div>
-        <div class="mySlides fade3">
-            <img class="homePageSlides" src="images/purple5.jpg">
-        </div>
-        <div class="mySlides fade3">
-            <img class="homePageSlides" src="images/purple6.jpg">
-        </div>
-            <a class="prev" onclick="plusSlides(-1)">&lsaquo;</a>
-            <a class="next" onclick="plusSlides(1)">&rsaquo;</a>
-    </div>
-<!-- SLIDESHOW ENDS -->
-
-
 
 
 
@@ -100,43 +116,41 @@
 <script src="script.js"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<script> AOS.init(); </script>
 </body>
 
 <footer class="site-footer" >
     <div class="container">
             <div class="footer1">
                     <div id="aboutUs">
-                        <p>Cyber Synthwave &copy 2020 </p>
+                        <p>Culture Screen &copy</p>
                     </div>
             </div>
 
             <div class="footer2">
-                <h2>Inspiration</h2>
+                <h2>TV-Shows</h2>
                     <ul>
-                        <li>Synthwave</li>
-                        <li>BladeRunner</li>
-                        <li>The Matrix</li>
+                        <li>The Sopranos</li>
+                        <li>Boardwalk Empire</li>
+                        <li>The Wire</li>
                     </ul>
             </div>
 
             <div class="footer3">
                 <h2>Follow Us</h2>
-                <ul>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                </ul>
+                    <ul>
+                        <li>YouTube</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
             </div>
     </div>
     
     <!-- hr CREATES STRAIGHT LINE ACROSS BOTTOM OF FOOTER -->
-    <hr width="89%">
+    <hr width="100%">
 
     <div class="signature">
-        <h1>Thomas Perez, LLC</h1>
+        <h1>Where We Analyze Culture</h1>
         <br>
     </div>
 
