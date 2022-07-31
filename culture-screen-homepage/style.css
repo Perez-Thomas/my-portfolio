@@ -1,0 +1,181 @@
+/* Entire Page */
+* {
+  font-family: "Bebas Neue", cursive;
+  font-family: "Noto Sans Math", sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Nav Bar */
+#navbar-logo {
+  text-align: left;
+}
+navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  text-align: right;
+  position: relative;
+
+  font-size: 1.5vw;
+  background-color: navy;
+  color: white;
+}
+
+/* SlideShow - And Down */
+body {
+  color: darkslategray;
+}
+#slideshow-image {
+  width: 100%;
+}
+
+/* YouTube Intro */
+#youtube-logo {
+  width: 30vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.youtube-channel-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 99%;
+  /* background-color: lightcoral; */
+  font-size: 2vw;
+  padding: 1em;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .youtube-channel-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1vh;
+    font-size: 3vw;
+  }
+}
+
+#playlist-heading {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.popular-youtube-playlists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  /* background-color: lightcoral; */
+  color: darkviolet;
+
+  margin: 0.5vw;
+}
+@media only screen and (max-width: 700px) {
+  .popular-youtube-playlists {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    /* padding-bottom: 1em; */
+  }
+}
+/* Instagram Intro */
+.instagram-channel-info {
+  font-size: 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-content: center;
+}
+@media only screen and (max-width: 700px) {
+  .instagram-channel-info {
+    grid-template-columns: 1fr;
+    font-size: 1vh;
+    font-size: 3vw;
+  }
+}
+
+#ig-logo {
+  /* padding: 1vw; */
+  width: 10vw;
+  padding-top: 1.5em;
+}
+
+/* Instagram Photos */
+.popular-ig-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  /* margin-right: -1em; */
+  border-radius: 0.5em;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 700px) {
+  .popular-ig-photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+iframe {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 0.5em;
+  justify-content: center;
+  align-content: center;
+}
+
+#first-playlist,
+#second-playlist,
+#third-playlist,
+#fourth-playlist {
+  padding: 2vw;
+  /* background-color: slategray; */
+  padding: 1vw;
+}
+
+#first-image,
+#second-image,
+#third-image,
+#fourth-image {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+/* PENDING - Twitter */
+/* Store */
+.instagram-media {
+  justify-content: center;
+  align-content: center;
+}
+.patreon-channel-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 99%;
+  /* background-color: lightcoral; */
+  font-size: 2vw;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .patreon-channel-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1vh;
+    font-size: 3vw;
+  }
+}
+
+footer {
+  background-color: navy;
+  height: 25vh;
+}
