@@ -1,0 +1,78 @@
+/* Nav Bar */
+#navbar-logo {
+  text-align: left;
+}
+navbar {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  position: relative;
+  font-size: 100%;
+  background-color: #333;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+navbar div:hover {
+  background-color: purple;
+  color: yellow;
+}
+
+/* navbar disappears at 600 px */
+@media screen and (max-width: 600px) {
+  navbar div:not(:first-child) {
+    display: none;
+  }
+
+  navbar div.icon {
+    float: right;
+    display: block;
+    color: white;
+  }
+}
+
+/* Color to Current Link */
+/* 
+navbar div.active {
+  background-color: #04aa6d;
+  color: white;
+} 
+*/
+
+/* Nav Bar Ends */
+
+.first-image {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* My Bust/Photo */
+.my-bust {
+  max-width: 100%;
+  height: auto;
+  padding: 10%;
+}
+
+.computer-boy {
+  max-width: 100%;
+  height: auto;
+  padding: 10%;
+}
