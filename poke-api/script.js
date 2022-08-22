@@ -40,5 +40,3 @@ function getPokemon(e) {
     });
   e.preventDefault();
 }
-
-// natasha mcmillan 212-356-3822
